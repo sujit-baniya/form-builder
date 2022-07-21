@@ -1,14 +1,15 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import {App} from './App'
-import 'virtual:windi-base.css'
-import 'virtual:windi-components.css'
-import '~/css/index.css'
-import 'virtual:windi-utilities.css'
 
+import '@unocss/reset/tailwind.css'
+import './styles/main.css'
+import 'uno.css'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const container = document.getElementById('root')
+const root = createRoot(container!)
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 )
