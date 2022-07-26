@@ -1,19 +1,20 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 
-export const Field = ({ field, fieldChanged, type, value }) => {
+export const Field = (props) => {
+    const [field, setField] = useState('')
     return (
-        <div key={field._uid}>
-            <label htmlFor={field._uid}>{field.label}</label>
+        <div key={props.field._uid}>
+            <label htmlFor={props.field._uid}>{props.field.label}</label>
             <input
-                type={type || field.component}
-                id={field._uid}
-                name={field._uid}
-                value={value}
+                type={props.type || props.field.component}
+                id={props.field._uid}
+                name={props.field._uid}
+                value={props.value || ''}
                 onChange={(e) => {
-                    // Notify the main state list of the new value
-                    fieldChanged(field._uid, e.target.value);
+                    setField(e.target.value);
+                    props.fieldChanged(props.field._uid, e.target.value);
                 }}
-            />
+                />
         </div>
-    );
-};
+    )
+}
