@@ -15,6 +15,7 @@ specifiers:
   '@vitejs/plugin-react': ^2.0.0
   eslint: ^8.20.0
   jsdom: ^20.0.0
+  prettier: ^2.7.1
   react: ^18.2.0
   react-dom: ^18.2.0
   typescript: ^4.7.4
@@ -22,6 +23,7 @@ specifiers:
   unplugin-auto-import: ^0.9.3
   usehooks-ts: ^2.6.0
   vite: ^3.0.2
+  vite-plugin-eslint: ^1.7.0
   vitest: ^0.18.1
 
 dependencies:
@@ -44,10 +46,12 @@ devDependencies:
   '@vitejs/plugin-react': 2.0.0_vite@3.0.2
   eslint: 8.20.0
   jsdom: 20.0.0
+  prettier: 2.7.1
   typescript: 4.7.4
   unocss: 0.44.5_vite@3.0.2
   unplugin-auto-import: 0.9.3_vite@3.0.2
   vite: 3.0.2
+  vite-plugin-eslint: 1.7.0_eslint@8.20.0+vite@3.0.2
   vitest: 0.18.1_jsdom@20.0.0
 
 packages:
@@ -616,6 +620,17 @@ packages:
 
   /@types/chai/4.3.1:
     resolution: {integrity: sha512-/zPMqDkzSZ8t3VtxOa4KPq7uzzW978M9Tvh+j7GHKuo6k6GTLxPJ4J5gE5cjfJ26pnXst0N5Hax8Sr0T2Mi9zQ==}
+    dev: true
+
+  /@types/eslint/8.4.5:
+    resolution: {integrity: sha512-dhsC09y1gpJWnK+Ff4SGvCuSnk9DaU0BJZSzOwa6GVSg65XtTugLBITDAAzRU5duGBoXBHpdR/9jHGxJjNflJQ==}
+    dependencies:
+      '@types/estree': 1.0.0
+      '@types/json-schema': 7.0.11
+    dev: true
+
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -3353,6 +3368,12 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
   /pretty-format/27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -4037,6 +4058,19 @@ packages:
     dependencies:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
+    dev: true
+
+  /vite-plugin-eslint/1.7.0_eslint@8.20.0+vite@3.0.2:
+    resolution: {integrity: sha512-Kz2HwBeAArmsE0QmWSm+e7CaEQrfMkEZpFw4hngoy6JmERjw7WUH8HLbG1OkreOKX4iIUReOss9N1Mkw4wEk8g==}
+    peerDependencies:
+      eslint: '>=7'
+      vite: '>=2'
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      '@types/eslint': 8.4.5
+      eslint: 8.20.0
+      rollup: 2.77.0
+      vite: 3.0.2
     dev: true
 
   /vite/3.0.2:
