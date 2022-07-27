@@ -1,11 +1,17 @@
-import { ParentComponent } from './components/ParentComponent'
-import { Form } from '~/components/form/Form'
-import { formData } from '~/data/formData'
+import { Suspense } from 'react'
+import {
+  BrowserRouter as Router,
+  useRoutes,
+} from 'react-router-dom'
+
+import routes from '~react-pages'
+
 export const App = () => {
 	return (
 		<div className="App">
-			<ParentComponent />
-			<Form formData={formData} />
+			<Suspense fallback={<p>Loading...</p>}>
+				{useRoutes(routes)}
+			</Suspense>
 		</div>
 	)
 }

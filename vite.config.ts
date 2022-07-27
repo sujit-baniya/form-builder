@@ -5,6 +5,7 @@ import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
+import Pages from 'vite-plugin-pages'
 
 export default defineConfig({
   resolve: {
@@ -15,6 +16,7 @@ export default defineConfig({
   plugins: [
     splitVendorChunkPlugin(),
     Unocss(),
+    Pages(),
     react(),
     AutoImport({
       imports: [
