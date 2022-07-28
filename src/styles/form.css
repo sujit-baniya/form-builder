@@ -1,0 +1,7 @@
+.form-checkbox {
+	@apply bg-white rounded border inline-block flex-shrink-0 h-4 select-none align-middle w-4 p-1;
+	color-adjust: exact;
+	background-origin: border-box;
+	color: rgba(63, 131, 248, 1);
+	border-color: rgba(210, 214, 220, 1);
+}
