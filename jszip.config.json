@@ -1,18 +1,11 @@
 {
-  "compressionLevel": 9,
-  "dereferenceLinks": true,
-  "entries": [
-    "dist/assets",
-    "dist/index.html",
-    "icon.png",
-    "manifest.toml"
-  ],
-  "force": true,
-  "ignoreEntries": [
-    "*.map"
-  ],
-  "mode": "add",
-  "outputEntry": "dist/package.xdc",
-  "quiet": false,
-  "verbose": false
+	"compressionLevel": 9,
+	"dereferenceLinks": true,
+	"entries": ["dist/assets", "dist/index.html"],
+	"force": true,
+	"ignoreEntries": ["*.map"],
+	"mode": "add",
+	"outputEntry": "dist/package.xdc",
+	"quiet": false,
+	"verbose": false
 }

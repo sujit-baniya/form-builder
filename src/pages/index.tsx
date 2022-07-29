@@ -3,12 +3,12 @@ import { Form } from '~/components/form/Form'
 import { formData } from '~/data/formData'
 
 const Index = () => {
-    return (
-        <div>
+	return (
+		<div>
 			<ParentComponent />
 			<Form formData={formData} />
-        </div>
-    )
+		</div>
+	)
 }
 
 export default Index
